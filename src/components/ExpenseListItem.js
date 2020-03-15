@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from "react-redux";
-import {removeExpense} from "../actions/expenses";
+import { removeExpense } from "../actions/expenses";
 
 function ExpenseListItem({ dispatch, id, description, amount, createdAt }) {
     return (
