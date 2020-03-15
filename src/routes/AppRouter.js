@@ -1,5 +1,4 @@
 import React from "react";
-import { hot } from "react-hot-loader";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import Header from "../components/Header";
 import Dashboard from '../components/Dashboard';
@@ -25,4 +24,4 @@ const AppRouter = () => (
   </BrowserRouter>
 );
 
-export default hot(module)(AppRouter);
+export default AppRouter;

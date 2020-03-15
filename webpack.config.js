@@ -10,7 +10,10 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /(node_modules|bower_components)/,
         loader: "babel-loader",
-        options: { presets: ["@babel/env"] }
+        options: { presets: ["@babel/env", "@babel/preset-react", {
+            'plugins': ['@babel/plugin-proposal-class-properties',
+              '@babel/plugin-proposal-object-rest-spread']
+        }] }
       },
       {
         test: /\.(css|s?css)$/,
@@ -18,7 +21,14 @@ module.exports = {
       }
     ]
   },
-  resolve: { extensions: ["*", ".js", ".jsx"] },
+  resolve: {
+    extensions: [
+      "*", ".js", ".jsx"
+    ],
+    alias: {
+      'react-dom': '@hot-loader/react-dom',
+    }
+  },
   output: {
     path: path.resolve(__dirname, "dist/"),
     publicPath: "/dist/",
