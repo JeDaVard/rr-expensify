@@ -4,8 +4,6 @@ const webpack = require("webpack");
 
 module.exports = (env) => {
   const isProduction = env === 'production';
-
-  console.log(env);
   return {
     entry: "./src/index.js",
     mode: "development",
@@ -18,7 +16,7 @@ module.exports = (env) => {
           options: {
             presets: [
                 "@babel/env",
-                "@babel/preset-react"
+                "@babel/preset-react",
             ],
             plugins: [
                 '@babel/plugin-proposal-class-properties',
