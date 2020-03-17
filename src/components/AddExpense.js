@@ -6,7 +6,7 @@ import { startAddExpense } from "../actions/expenses";
 const AddExpense = (props) => {
     const onSubmit = (expense) => {
         props.startAddExpense(expense);
-        props.history.push('/');
+        props.history.push('/dashboard');
     };
     return (
         <div>
