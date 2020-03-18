@@ -1,0 +1,28 @@
+.loginButton {
+  width: 200px;
+  height: 30px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  background: rgba(0, 21, 21, 0.86);
+  transition: background 0.1s ease-in-out;
+}
+.loginButton:hover {
+  background: rgb(3, 83, 83);
+}
+
+.edit-add_Button {
+  @extend .loginButton
+}
+
+.delButton {
+  @extend .loginButton;
+  color: black;
+  background: #fffff9;
+  max-width: 64px;
+}
+.delButton:hover {
+  color: white;
+  background: #9a1733;
+
+}

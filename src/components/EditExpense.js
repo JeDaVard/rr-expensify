@@ -7,13 +7,9 @@ import {startEditExpense, startRemoveExpense} from "../actions/expenses";
 const EditExpense = (props) => {
     return (
         <>
-            <ExpenseForm
-                expense={props.expenses}
-                onSubmit={(expense) => {
-                props.dispatch(startEditExpense(props.expenses.id, expense));
-                props.history.push('/dashboard');
-            }}/>
+            <h1>Edit</h1>
             <button
+                className={'delButton'}
                 onClick={() => {
                     const id = props.expenses.id;
                     props.dispatch(startRemoveExpense({ id }));
@@ -21,6 +17,14 @@ const EditExpense = (props) => {
                 }}>
                 Delete
             </button>
+            <h1> </h1>
+            <ExpenseForm
+                butname={'Edit expense'}
+                expense={props.expenses}
+                onSubmit={(expense) => {
+                props.dispatch(startEditExpense(props.expenses.id, expense));
+                props.history.push('/dashboard');
+            }}/>
         </>
     )
 };

@@ -16,18 +16,20 @@ export const history = createBrowserHistory();
 
 const AppRouter = () => (
   <Router history={history}>
-    <>
-      <Header />
-      <Switch>
-        <Route path={"/"} component={Login} exact={true} />
-        <PrivateRoute path={"/dashboard"} component={Dashboard} />
-        <PrivateRoute path={"/create"} component={AddExpense} />
-        <PrivateRoute path={"/edit/:id"} component={EditExpense} />
-        <Route path={"/help"} component={Help} />
-        <Route path={"/about"} component={About} />
-        <Route component={NotFound} />
-      </Switch>
-    </>
+    <div className={'box-layout'}>
+      <div className={'box-content'}>
+        <Header />
+        <Switch>
+          <Route path={"/"} component={Login} exact={true} />
+          <PrivateRoute path={"/dashboard"} component={Dashboard} />
+          <PrivateRoute path={"/create"} component={AddExpense} />
+          <PrivateRoute path={"/edit/:id"} component={EditExpense} />
+          <Route path={"/help"} component={Help} />
+          <Route path={"/about"} component={About} />
+          <Route component={NotFound} />
+        </Switch>
+      </div>
+    </div>
   </Router>
 );
 const mapStateToProps = (state) => ({

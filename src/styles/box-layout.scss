@@ -1,0 +1,16 @@
+.box-layout {
+  background: url('/img/bg.jpg');
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  overflow-x: hidden;
+}
+.box-content {
+  max-width: 60%;
+  background: #e9f0ee;
+  margin: 4% auto;
+  padding: 30px;
+  border-radius: 54px;
+  box-shadow: 0 0 40px black;
+  border: 15px solid rgba(255, 255, 255, 0.5)
+}

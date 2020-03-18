@@ -1,0 +1,42 @@
+.filters {
+  text-align: center;
+}
+
+.summary {
+  color: $tca;
+}
+.input-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  @media (min-width: 800px ) {
+    flex-direction: row;
+    margin-bottom: 30px;
+  }
+}
+.input-group__item {
+  margin-bottom: 10px;
+  margin-left: 4%;
+  @media (min-width: 992px ) {
+    flex-direction: row;
+    margin-bottom: 30px;
+  }
+}
+
+.text-input {
+  border: 1px solid #cacccd;
+  height: 47px;
+  font-size: 20px;
+  font-weight: 300;
+  padding: 0 10px 0 10px;
+}
+
+.select {
+  @extend .text-input;
+  font-size: 18px;
+}
+.textarea {
+  @extend .text-input;
+  padding-top: 10px;
+  height: 10rem;
+}

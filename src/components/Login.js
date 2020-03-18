@@ -4,8 +4,10 @@ import { startLogin } from '../actions/auth';
 
 function Login({ isAuthenticated, startLogin }) {
     return (
-        <div>
-            <button onClick={startLogin} hidden={isAuthenticated}>Login</button>
+        <div className={'login'} hidden={isAuthenticated}>
+            <h3>Get your expenses under control</h3>
+            <p>JOIN TO EXPENSIFY</p>
+            <button className={'loginButton'} onClick={startLogin}>Login</button>
         </div>
     )
 }

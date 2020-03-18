@@ -1,0 +1,67 @@
+
+.logo {
+  display: flex;
+  justify-content: space-between;
+  background: #d5e2e0;
+  padding: 30px;
+  max-width: 100%;
+  border-radius: 26px;
+  max-height: 100px;
+  @media (max-width: 992px) {
+    max-height: 230px;
+  }
+}
+
+.logo h4 {
+  margin-top: -6px;
+  font-weight: 100;
+  font-size: 1.85rem;
+}
+
+.logo button {
+  border-radius: 50%;
+  margin-top: 4px;
+  background: #fffdf8 ;
+  border: 10px solid #50c5bc;
+  width: 64px;
+  height: 64px;
+}
+
+.logotype {
+  @media (max-width: 992px) {
+    margin-top: 70px;
+    margin-left: 40px;
+  }
+}
+
+.menu {
+  margin: auto;
+  display: flex;
+  @media (max-width: 992px) {
+    flex-direction: column;
+  }
+}
+.menu button {
+  margin-left: 50px;
+  @media (max-width: 992px) {
+  margin-bottom: 10px;
+}
+}
+.Create {
+  background: url('/img/add.png') no-repeat center;
+  width: 31px;
+  height: 31px;
+  background-size: 99%;
+}
+.Dashboard {
+  background: url('/img/dash.png') no-repeat center;
+  width: 32px;
+  height: 32px;
+  background-size: 99%;
+}
+.Logout {
+  background: url('/img/logout.png') no-repeat center;
+  width: 31px;
+  height: 31px;
+  background-size: 99%;
+}

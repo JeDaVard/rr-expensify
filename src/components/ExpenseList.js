@@ -13,14 +13,24 @@ export const ExpenseList = ({ expenses }) =>  {
     });
 
     return(
-        <div>
-            <h1>Expenses</h1>
-            {loading ? <p>Loading...</p> : expenses.length ? (
-                expenses.map((expense) => {
-                    return <ExpenseListItem key={expense.id} {...expense}/>
-                })) : (
-                <p>You haven't expense records</p>
-            )}
+        <div className="container">
+            <div className="list-header">
+                <div className="show-for-mobile">Expenses</div>
+                <div className="show-for-desktop">Expense</div>
+                <div className="show-for-desktop">Amount</div>
+            </div>
+            <div className="list-body">
+                {loading ? <div className="list-item list-item--message">
+                    <span>Loading ...</span>
+                </div> : expenses.length ? (
+                    expenses.map((expense) => {
+                        return <ExpenseListItem key={expense.id} {...expense}/>
+                    })) : (
+                    <div className="list-item list-item--message">
+                        <span>No expenses</span>
+                    </div>
+                )}
+            </div>
         </div>
     )
 };

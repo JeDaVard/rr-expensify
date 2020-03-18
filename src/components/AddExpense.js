@@ -11,7 +11,7 @@ const AddExpense = (props) => {
     return (
         <div>
             <h1>Add Expense</h1>
-            <ExpenseForm onSubmit={onSubmit}/>
+            <ExpenseForm butname={'Add expense'} onSubmit={onSubmit}/>
         </div>
     )
 };
